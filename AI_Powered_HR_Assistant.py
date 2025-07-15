@@ -10,6 +10,7 @@ Original file is located at
 #!pip install -U langchain-community
 #!pip install pypdf
 #!pip install faiss-cpu
+
 import openai
 from langchain.document_loaders import PyPDFLoader
 
@@ -109,14 +110,3 @@ demo = gr.Interface(
 )
 
 demo.launch()
-
-from langchain.chat_models import ChatOpenAI
-
-
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_key=openai_api_key)
-
-!pip install -U langchain-community
-
-!pip install pypdf
-
-!pip install faiss-cpu
